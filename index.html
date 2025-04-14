@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #E9F5DB;
+            font-family: 'Impact', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            position: relative;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .portfolio {
+            font-size: 220px;
+            font-weight: bold;
+            color: #718355;
+            text-transform: uppercase;
+            animation: slideIn 2s ease-in-out;
+        }
+        .my {
+            position: absolute;
+            top: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 200px;
+            font-family: 'Euphoria Script', cursive;
+            color: #CFE1B9;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .nav-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+        .nav-buttons button {
+            background: #718355;
+            color: #FFFCDC;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+        }
+        .nav-buttons button:hover {
+            background: #87986A;
+            color: #E9F5DB;
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="my">My</div>
+        <div class="portfolio">PORTFOLIO</div>
+    </div>
+    <div class="nav-buttons">
+        <button onclick="location.href='abt.html'">About Me</button>
+        <button onclick="location.href='education.html'">Education</button>
+        <button onclick="location.href='skills.html'">Skills</button>
+        <button onclick="location.href='experience.html'">Experience</button>
+        <button onclick="location.href='achievements.html'">Achievements</button>
+        <button onclick="location.href='scrapbook.html'">Scrapbook</button>
+
+    </div>
+</body>
+</html>

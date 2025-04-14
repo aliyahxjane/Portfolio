@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education</title>
+  <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #E9F5DB;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #14281D;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px;
+      height: 100vh;
+      margin-left: 1px; 
+    }
+    .about-text {
+      font-family: Impact, sans-serif;
+      font-size: 150px;
+      color: #718355;
+      line-height: 0.9;
+      text-align: right;
+      flex: 1;
+      margin-left: 50px; /* Added to increase space above */
+      animation: blurIn 2s ease-in-out;
+    }
+    .info {
+      flex: 1;
+      text-align: left;
+      font-size: 18px;
+      color: #333;
+      background-color: #FFFCDC;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 2s ease-in-out;
+    }
+    .info h2 {
+      font-size: 30px;
+      color: #718355;
+      margin-bottom: 10px;
+    }
+    .info p {
+      font-size: 16px;
+      color: #333;
+      margin-top: 5px;
+      line-height: 1.6;
+    }
+    /* Navigation bar styling */
+    .navbar {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 15px;
+    }
+    .navbar a {
+      text-decoration: none;
+      font-size: 16px;
+      color: #333;
+      padding: 5px 10px;
+      border: 1px solid #333;
+      border-radius: 20px;
+      background-color: #FFFCDC;
+      box-shadow: 0 0 10px rgba(113, 131, 85, 0.3);
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .navbar a:hover {
+      transform: scale(1.1);
+      background-color: #E9F5DB;
+      box-shadow: 0 0 20px rgba(113, 131, 85, 0.5);
+    }
+    .navbar a.active {
+      background-color: #718355;
+      color: #FFF;
+      border-color: #718355;
+    }
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes slideIn {
+      from {
+        transform: translateX(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    @keyframes blurIn {
+        0% {
+            opacity: 0;
+            filter: blur(10px);
+        }
+        100% {
+            opacity: 1;
+            filter: blur(0);
+        }
+    }
+  </style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="abt.html">About Me</a>
+  <a href="Education.html" class="active">Education</a>
+  <a href="skills.html">Skills</a>
+  <a href="experience.html">Experience</a>
+  <a href="achievement.html">Achievements</a>
+  <a href="scrapbook.html">Scrapbook</a>
+
+</div>
+
+<div class="container">
+  <div class="info">
+    <h2>Primary</h2>
+    <p>San Francisco Elementary School</p>
+    <p>Brgy. San Francisco, Nagcarlan, Laguna</p>
+    <p>2011–2017</p>
+
+    <h2>Secondary</h2>
+    <p>Cristobal S. Conducto Memorial Integrated National High School</p>
+    <p>Brgy. Pauli 2, Rizal, Laguna</p>
+    <p>2017–2023</p>
+
+    <h2>Tertiary</h2>
+    <p>Pamantasan ng Lungsod ng San Pablo</p>
+    <p>Brgy. San Jose, San Pablo City, Laguna</p>
+    <p>2023–Present</p>
+  </div>
+  <div class="about-text">
+    EDUCATIONAL<br>ATTAINMENT
+  </div>
+</div>
+
+</body>
+</html>

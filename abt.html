@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            background-color: #E9F5DB;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+        }
+        .about-text {
+            font-family: Impact, sans-serif;
+            font-size: 200px;
+            color: #718355;
+            line-height: 0.9;
+            text-transform: uppercase;
+            flex: 1;
+            text-align: left;
+            animation: blurIn 2s ease-in-out;
+        }
+        .info {
+            background-color: #FFFCDC;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            text-align: left;
+            animation: fadeInUp 2s ease-in-out;
+            margin-top: 150px; /* Added to increase space above */
+        }
+        .info p {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .info p strong {
+            color: #718355;
+        }
+        /* Navigation bar styling */
+        .navbar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 15px;
+        }
+        .navbar a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #333;
+            padding: 5px 10px;
+            border: 1px solid #333;
+            border-radius: 50px;
+            background-color: #FFFCDC;
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 10px rgba(113, 131, 85, 0.3);
+        }
+        .navbar a:hover {
+            transform: scale(1.1);
+            background-color: #E9F5DB;
+            box-shadow: 0 0 20px rgba(113, 131, 85, 0.5);
+        }
+        /* Highlight the active page */
+        .navbar a.active {
+            background-color: #718355;
+            color: #FFF;
+            border-color: #718355;
+        }
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes blurIn {
+            0% {
+                opacity: 0;
+                filter: blur(10px);
+            }
+            100% {
+                opacity: 1;
+                filter: blur(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="abt.html" class="active">About Me</a>
+        <a href="Education.html">Education</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="achievement.html">Achievements</a>
+        <a href="scrapbook.html">Scrapbook</a>
+
+    </div>
+    <div class="container">
+        <div class="about-text">
+            ABOUT<br>ME
+        </div>
+        <div class="info">
+            <p><strong>Name:</strong> Aliyah Jane P. Caraan</p>
+            <p><strong>Age:</strong> 19</p>
+            <p><strong>Birthday:</strong> May 26, 2005</p>
+            <p><strong>Address:</strong> Nagcarlan, Laguna, Philippines</p>
+            <p><strong>Height:</strong> 5'0"</p>
+            <p><strong>Weight:</strong> 42 kg</p>
+            <p><strong>Sports:</strong> Badminton</p>
+            <p>Hi! I’m Aliyah Jane, from Nagcarlan, Laguna, Philippines. I’m someone who finds joy in life’s little moments—whether it’s spending time with my best friend, exploring new places, or simply enjoying a peaceful day. I believe that life is all about learning and growing, and I always try to embrace every experience with an open heart and mind.</p>
+            <p>I love discovering new things, whether it’s through books, meaningful conversations, or new adventures. I appreciate the beauty in simplicity and value the connections I make with the people around me. My goal is to live a life filled with purpose, kindness, and continuous growth, making every day count in my own little way.</p>
+        </div>
+    </div>
+</body>
+</html>
+

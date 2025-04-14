@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scrapbook of Memories</title>
+    <style>
+        body {
+            background: #E9F5DB;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-family: 'Impact', sans-serif;
+            color: #718355;
+            font-size: 100px;
+            margin: 20px 0;
+            text-align: center;
+            position: static; 
+            margin-top: 70px; 
+        }
+
+        .scroll-container {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            margin-top: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 10px;
+            justify-items: center;
+        }
+
+        .photo {
+            background-color: #FCE4D8;
+            border: 4px dashed #97A97C;
+            padding: 10px;
+            border-radius: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+            max-width: 250px;
+            overflow: hidden;
+        }
+
+        .photo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            display: block;
+        }
+
+        .note {
+            margin-top: 30px;
+            background-color: #E1EEC3;
+            color: #14281D;
+            padding: 20px;
+            border-radius: 20px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .final-message {
+            margin-top: 15px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #14281D;
+        }
+
+        .music-controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            text-align: center;
+        }
+
+        #playPauseBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #718355;
+            color: #FFF;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #playPauseBtn:hover {
+            background-color: #5A6B45;
+            transform: scale(1.1);
+        }
+
+        audio {
+            display: none;
+        }
+
+        .navbar {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 15px;
+      font-family: Arial, sans-serif;
+    }
+    .navbar a {
+      text-decoration: none;
+      font-size: 16px;
+      color: #333;
+      padding: 5px 10px;
+      border: 1px solid #333;
+      border-radius: 20px; /* Rounded buttons */
+      background-color: #FFFCDC;
+      box-shadow: 0 0 10px rgba(113, 131, 85, 0.3);
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .navbar a:hover {
+      transform: scale(1.1);
+      background-color: #E9F5DB;
+      box-shadow: 0 0 20px rgba(113, 131, 85, 0.5);
+    }
+    /* Highlight the active page */
+    .navbar a.active {
+      background-color: #718355;
+      color: #FFF;
+      border-color: #718355;
+    }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="abt.html">About Me</a>
+        <a href="Education.html">Education</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="achievement.html">Achievements</a>
+    </div>
+
+    <h1>Scrapbook of Memories</h1>
+
+    <div class="scroll-container">
+        <div class="gallery">
+            <!-- Photos -->
+            <div class="photo"><img src="1.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="2.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="3.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="4.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="5.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="6.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_1055.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_1082.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_1093.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_1884.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_2126.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_2406.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_2422.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_2556.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_3295.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_3351.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_3397.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_3429.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_3510.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_3655.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_3752.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_3794.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_3934.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_4223.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_4232.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_4286.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_4289.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_4291.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_4421.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_4600.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_4825.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_4838.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_4862.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_4895.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_5067.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_5075.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_5123.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_5753.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_6559.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_6876.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_7163.jpg" alt="Memory Photo"></div>
+            <div class="photo"><img src="IMG_7591.jpg" alt="Memory Photo"></div>
+        </div>
+
+        <div class="note">
+            <p>To my dearest friends, your friendship has made my journey through college unforgettable. I’ll always cherish our moments together.</p>
+            <div class="final-message">
+                Thank you for helping me survive college life!
+            </div>
+        </div>
+    </div>
+
+    <!-- Music Control -->
+    <div class="music-controls">
+        <button id="playPauseBtn">Play Music</button>
+        <audio id="bgMusic" loop>
+            <source src="Minsan.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        // Music control functionality
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const bgMusic = document.getElementById('bgMusic');
+
+        playPauseBtn.addEventListener('click', function() {
+            if (bgMusic.paused) {
+                bgMusic.play();
+                playPauseBtn.textContent = 'Pause Music';
+            } else {
+                bgMusic.pause();
+                playPauseBtn.textContent = 'Play Music';
+            }
+        });
+    </script>
+
+</body>
+</html>
